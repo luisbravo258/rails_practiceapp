@@ -19,3 +19,13 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'pry'
+end
+
+group :development do
+  gem 'pg'
+  gem 'rails_12factor'
+end
