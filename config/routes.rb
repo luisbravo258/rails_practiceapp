@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :chefs, except: [:new]
+  resources :chefs, except: [:new, :destroy]
 
   get '/register' , to: 'chefs#new'
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'logins#destroy'
 
   resources :styles, only: [:new, :create, :show]
-  resources :ingredients, only:[:new, :create, :show]
+  resources :ingredients, only: [:new, :create, :show]
 
   # login -> new session
   # logout -> close session
